@@ -152,7 +152,11 @@ against it, which is the $400 rule's whole mechanism.
 **BILL_REPORT** — what they were actually charged, submitted voluntarily,
 **de-identified on ingest**. This is the flywheel: it corrects the model and it
 detects disputes.
-`id, estimate_id (nullable), location_id, procedure_ids, total_billed, facility_fee_present (bool), facility_fee_amount, service_date_month (month precision only), source (user_upload | manual_entry), created_at`
+`id, estimate_id (nullable), location_id, procedure_ids, total_billed, facility_fee_present (bool), facility_fee_amount, service_date_month (month precision only), source (on_device_extraction | manual_entry), created_at`
+
+> There is no `upload` source and no image entity anywhere in this model. The
+> photograph never leaves the phone — see §4a, which is a design decision rather
+> than a policy, because a policy can be changed by whoever runs the server.
 
 **BILL_LINE** — `id, bill_report_id, code, description, amount`
 
@@ -183,10 +187,68 @@ detects disputes.
 
 ---
 
-## 5. Open questions for a human
+## 4a. Bill photographs: the image never arrives
 
-- **Bill upload.** A photographed bill is the richest input and the biggest
-  privacy risk. OCR locally in the browser, or never accept images at all?
+**Decided.** A photographed bill is the richest input we could have and the
+worst thing we could hold. So the server never receives one.
+
+**The rule: you cannot leak, subpoena, or breach what you never received.**
+Every other protection — encryption at rest, short retention, tight access
+control — is a promise about custody. This is the only design that needs no
+promise, and it is the only one that survives an insider, a warrant and a
+misconfigured bucket without changing its answer: *we do not have it.*
+
+### How it works
+
+1. **The photograph stays on the phone.** Text extraction runs in the browser
+   (WASM OCR), on-device. No upload, no third-party OCR API — sending a medical
+   bill to someone else's vision endpoint is the exact harm being avoided, just
+   with a different logo on it.
+2. **Extraction is a WHITELIST, not a redaction.** We do not receive a bill and
+   remove the personal parts; we pull only these fields and discard the rest by
+   construction:
+
+   | Kept | Why |
+   |---|---|
+   | facility / practice name | resolves to a LOCATION |
+   | service line codes (CPT/HCPCS/rev) | resolves to a PROCEDURE |
+   | charge amount per line | the PRICE_OBSERVATION |
+   | whether a facility fee line is present, and its amount | the wedge |
+   | service month and year | effective dating |
+   | payer name (optional) | plan-level context |
+
+   Never extracted, never transmitted: patient name, address, date of birth,
+   member or MRN or account number, guarantor, diagnosis codes, provider notes.
+   **Diagnosis codes are excluded on purpose** — they are the difference between
+   a price report and a medical record.
+3. **The user sees exactly what will be sent**, as editable fields, before
+   anything leaves the device. Confirmation is both consent and quality control:
+   on-device OCR is less accurate than a server GPU, and a human correcting six
+   fields fixes that while proving they agreed to each one.
+4. **What is transmitted is JSON**, becoming a BILL_REPORT. It is dated to the
+   month, carries no session-to-identity link, and stores no IP address.
+5. **Keeping their own copy is local-only.** If someone wants the image kept, it
+   goes in browser storage on their device, never synced. Their phone already
+   holds their medical bills; that is not our risk to take on.
+
+### Consequences that must not be quietly dropped
+
+- **No `BILL_IMAGE` entity exists anywhere in this model, and none should be
+  added.** If a future feature seems to need one, it is a different product.
+- `BILL_REPORT.source` is therefore `on_device_extraction | manual_entry`. There
+  is no `upload` value.
+- **EXIF never matters**, because the file never moves. (If any image path is
+  ever built anyway, strip EXIF first — a bill photo carries GPS.)
+- **Abuse prevention cannot fingerprint.** Rate limiting has to work without
+  identifying the submitter: hashed short-TTL buckets or proof-of-work, not
+  device fingerprints. A tool for frightened people must not build a tracking
+  system to protect itself.
+- **Manual entry stays a first-class path.** Some bills will not OCR, some
+  people will not grant camera access, and neither should be a dead end.
+
+---
+
+## 5. Open questions for a human
 - **Scope of v1.** Proposal: one state (California), the 50 procedures people
   actually shop for, and the federal rights. National is a data problem, not a
   design problem, and can wait.

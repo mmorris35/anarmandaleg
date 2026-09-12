@@ -41,9 +41,12 @@ back.
 - **A price is never a fact, only an observation** with a source, a date and a
   confidence. Two sources that disagree are both kept; the disagreement is
   information, not an error to be averaged away.
-- **No account, no PHI.** Nothing here needs to know who you are or what is
-  wrong with you. Submitted bills are de-identified before they are stored, and
-  a lookup is not a medical record.
+- **No account, no PHI, and no photographs.** Nothing here needs to know who you
+  are or what is wrong with you. If you photograph a bill, the image stays on
+  your phone: text is extracted on-device and only six whitelisted fields — the
+  place, the codes, the amounts, whether a facility fee appeared, and the month
+  — are ever transmitted, after you have seen and corrected them. You cannot
+  leak, subpoena or breach what you never received.
 - **Cite or stay quiet.** Every right, threshold and deadline carries its
   statute or regulation. A tool that tells you to say something to a hospital
   had better be able to show why it works.

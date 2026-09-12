@@ -111,6 +111,30 @@ the number both ways where known, and give the sentence that exercises it —
 plus the sentence that invokes the restriction when privacy, rather than price,
 is the reason.
 
+### Both errors, and they are symmetric
+
+Mike again, and this is the other half of the same ignorance: *"One time, intake
+assumed I was self pay, and I protested, assuming insurance would ALWAYS lower
+my out of pocket cost."*
+
+He had to argue his way **into** the more expensive option, believing he was
+protecting himself. Both mistakes are live and the page must guard both:
+
+| The error | What it costs | Who makes it |
+|---|---|---|
+| Not knowing self-pay is an option | pays the negotiated rate on a deductible they will never reach | almost everyone |
+| Assuming insurance is always cheaper | pays more than the published cash price for the same service | anyone who has been taught insurance is protection |
+
+**So the page never presents either as the default.** It shows both numbers side
+by side, asks the one question that decides it — *do you expect to hit your
+deductible this year?* — and says plainly which is cheaper **for this person,
+this year**, with the reason. Where it genuinely cannot tell, it says that
+instead of guessing, because a confident wrong answer here costs real money.
+
+An insurance card is not a discount card. It is a contract whose negotiated rate
+is sometimes higher than the price the same provider will accept in cash, and
+nobody whose job it is to know will volunteer that at the desk.
+
 ### The ask is the trigger
 
 Mike: *"Or if the hospital could cover some of it if I just asked."*

@@ -53,9 +53,20 @@ back.
 - **Built for a frightened person at a desk**, not a researcher with an
   afternoon. The answer is a number, a warning and three sentences to say.
 
+## The name
+
+`anarmandaleg` is the repository. The product may end up called something a
+frightened person can say out loud at 11pm — that name is not chosen yet.
+
+The repo keeps this one either way. Mike, who started it after being quoted $500
+to talk to a doctor about a knee he already had the answer for: *"The product
+name could change but my righteous anger with the system is carried in
+anarmandaleg."*
+
 ## Status
 
-Design only. `docs/ERD.md` is the data model. Nothing is built yet.
+Design only. `docs/ERD.md` is the data model, `docs/BUILD.md` is the brief.
+Nothing is built yet.
 
 ## Data sources
 

@@ -196,13 +196,21 @@ An implementer must not, without an explicit decision from Mike:
 
 ---
 
-## 9. Still open for Mike
+## 9. Decided, and still open
 
-Answer these before or during the slice; none blocks starting.
+**Decided by Mike, 2026-09-11:**
 
-- **Repository visibility.** It is public now, at his instruction. One command
-  makes it private.
-- **v1 scope** — California and 50 procedures, as above?
-- **Provider-level pricing** — locations and organisations only, as above?
-- **Name and tone of the public face.** `anarmandaleg` is the repo. Whether it
-  is also what a frightened person sees at 11pm is a different question.
+- **v1 scope: yes.** California, and the 50 most common procedures.
+- **Repository visibility: public.**
+- **`anarmandaleg` is the repository name only.** The public product name is
+  undecided and may differ. Mike: *"The product name could change but my
+  righteous anger with the system is carried in anarmandaleg."* So the anger is
+  load-bearing and stays in the repo; the name a frightened person reads at 11pm
+  is a separate decision, still to be made. **Do not hard-code the product name
+  anywhere** — config or a single constant, used by the UI.
+
+**Still open:**
+
+- **Provider-level pricing.** Not yet answered. Proceeding on locations and
+  organisations only, never individual clinicians, because naming humans invites
+  fights the data may not survive. Easy to add later; very hard to walk back.

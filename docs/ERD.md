@@ -151,6 +151,23 @@ Seed rows, all verified 2026-09-11:
 > Written to be read aloud by someone who is frightened. Short sentences, no
 > legalese in the spoken part, the citation kept in a footnote for when they are
 > told no.
+>
+> **Never make an adversary of the person at the desk.** Mike: *"Nobody at the
+> desk has the job of knowing either. They're just a cashier."* That is correct
+> and it decides the tone of every script here. The person taking payment is not
+> withholding the cash price; they were never told it, are not authorised to
+> quote it, and are measured on throughput. A script that picks a fight with
+> them fails twice — it does not get the number, and it spends a frightened
+> person's courage on someone who cannot help.
+>
+> So every script: **names who can actually answer** (billing office, financial
+> counsellor, patient financial services), **gives the escalation path** in
+> advance — *"if they cannot answer, ask who can, and ask for their name"* — and
+> stays polite enough that the person at the desk becomes an ally rather than an
+> obstacle. `SCRIPT.audience` exists for exactly this reason: the same right
+> needs different words for a scheduler, a registration clerk and a billing
+> department, and sending the wrong one is how a patient gets told no by someone
+> who simply does not know.
 
 **CHARITY_POLICY** — one hospital's actual policy.
 `id, hospital_id, free_care_fpl_max, sliding_scale_fpl_max, application_url, presumptive_eligibility (json: CalFresh, WIC, LIHEAP...), covers_provider_based_locations (bool, nullable), application_deadline_days_after_service, source_id, as_of`

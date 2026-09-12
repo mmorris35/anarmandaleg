@@ -133,7 +133,8 @@ Seed rows, all verified 2026-09-11:
 
 | name | citation | key terms |
 |---|---|---|
-| Good Faith Estimate | 45 CFR 149.610 | self-pay or uninsured; written, itemised, with codes and NPIs; 1 business day if scheduled 3+ days out, 3 business days if 10+ days out or on request |
+| Good Faith Estimate | 45 CFR 149.610 | self-pay or uninsured; written, itemised, with codes and NPIs; 1 business day if scheduled 3–10 days out, 3 business days if 10+ days out or on request; effective 1 January 2022 |
+| **Oral notice of the right to an estimate** | 45 CFR 149.610 (No Surprises Act) | the provider **must tell a self-pay or uninsured patient, out loud, when scheduling**, that they have the right to a Good Faith Estimate. CMS: applies to all providers in all settings |
 | Patient-provider dispute resolution | No Surprises Act | final bill ≥ $400 over the GFE; third-party reviewer; binding on provider |
 | CA Hospital Fair Pricing | Health & Safety Code 127400 et seq. | non-profit; free care under 200% FPL, sliding scale 200–400%; written notice required; HCAI publishes policies |
 | 501(r) financial assistance | 26 USC 501(r) | non-profit hospitals must have and publicise a financial assistance policy |

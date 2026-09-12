@@ -12,11 +12,19 @@ payments and an itemisation. Mandatory, standardised, since 1968.
 
 You book a knee consult. You get a shrug, and a bill six weeks later.
 
-There is a law that closes this — the **Good Faith Estimate**, which entitles you
-to a written, itemised price *before* you are committed. It is a few years old,
-almost nobody has heard of it, and it only triggers if you happen to say a
-particular sentence out loud. Financing a car is better regulated than financing
-your own body.
+The car disclosure is the **Truth in Lending Act**, enacted 29 May 1968 as Title I
+of the Consumer Credit Protection Act (15 U.S.C. 1601), implemented by Regulation
+Z from 1 July 1969. APR, finance charge, the number and amount of payments — in
+writing, before you sign.
+
+Healthcare's version arrived **fifty-four years later**: the **Good Faith
+Estimate**, effective 1 January 2022 under the No Surprises Act. It entitles you
+to a written, itemised price before you are committed.
+
+And here is the part worth knowing: **the provider is already required to tell
+you, out loud, when you schedule, that you have the right to one.** They are not
+merely permitted to mention it. They are obliged to — and almost nobody does.
+Financing a car is better regulated than financing your own body.
 
 ## Why the price is not the price
 
@@ -108,11 +116,23 @@ should have to fight anybody.
 
 That is not absolution for the profession. A specialty that says *first, do no
 harm* while treating price as another department's problem has drawn the
-boundary of harm around what is convenient — and cost is a clinical variable,
-because people skip doses, delay scans and abandon follow-ups over it. Most
-physicians genuinely are not shown the negotiated rate and do not set the
+boundary of harm around what is convenient — and **cost is a clinical variable
+with measured consequences.** In cancer care, where it is best studied: around a
+quarter of patients report cost-related medication nonadherence, roughly a fifth
+do not fill prescriptions at all, financial toxicity tracks with delayed and
+later-stage diagnosis, and bankruptcy is an independent predictor of mortality.
+
+The *AMA Journal of Ethics* has published the argument that financial toxicity is
+**iatrogenic harm** — harm caused by the treatment — and belongs inside informed
+consent, while noting that codes of medical ethics still do not require consent
+to cost. So this is not an outsider's complaint; it is an argument the
+profession is having with itself, slowly.
+
+Most physicians genuinely are not shown the negotiated rate and do not set the
 chargemaster. That indicts the institution that keeps them ignorant, not the
-person with their hands on you.
+person with their hands on you. The name for what many of them feel is **moral
+distress** — Jameton's 1984 term for knowing the right action and being
+constrained from taking it by hierarchy, policy and resources.
 
 **Doing your job well is not a defence against knowing what your job produces.**
 Plenty of clinicians already feel this from the other side of the desk. They are

@@ -72,6 +72,45 @@ direction.
 | **Financial assistance / charity care** | up to the entire bill for non-profits | Income documentation, an application, and often a deadline after the date of service. Applying is not means-testing your dignity, but it is paperwork. |
 | **A different site of care** | the same service at an independent office rather than a hospital outpatient department | Continuity: your surgeon may only practise at one. Sometimes the cheaper site genuinely is not an option, and saying so honestly is part of the answer. |
 
+### The choice nobody knows they have
+
+Mike, who has run his own businesses for decades and reads his own bills:
+*"I did not know, and I doubt most do, that I had the option to self pay per
+visit."*
+
+That is the single highest-value fact this product can teach, and it goes at the
+top of the answer, not in a footnote. **Having insurance does not oblige you to
+use it for a given visit.** The decision is per encounter, not a plan change,
+and nobody at a front desk describes it as a decision at all — insurance is
+presented as simply what happens.
+
+It is backed by a right, and the right is unusually strong:
+
+> **45 CFR 164.522(a)(1)(vi).** A provider **must** agree to restrict disclosure
+> of your information to your health plan when the disclosure is for payment or
+> operations and you have **paid for that item or service in full out of
+> pocket.** Not *may* — must. It came in with the HITECH omnibus rule, and it
+> exists precisely so that paying your own way can also keep the encounter out
+> of the plan's hands.
+
+**State the limits in the same breath, because a right oversold is worse than
+one unmentioned:**
+
+- It covers the **specific service you paid in full for**, not your whole chart.
+- It does not apply where **law requires** a claim be submitted.
+- Some **in-network contracts** restrict a provider from accepting cash for a
+  covered service without filing. A provider may push back for that reason and
+  not be acting in bad faith.
+- **Ask before the visit is billed.** Undoing a submitted claim is a different
+  and much worse conversation.
+- And the cost, already stated in §2a: **it usually will not touch your
+  deductible or out-of-pocket maximum.**
+
+**What the page must do:** present self-pay as a *choice with two sides*, show
+the number both ways where known, and give the sentence that exercises it —
+plus the sentence that invokes the restriction when privacy, rather than price,
+is the reason.
+
 ### The ask is the trigger
 
 Mike: *"Or if the hospital could cover some of it if I just asked."*

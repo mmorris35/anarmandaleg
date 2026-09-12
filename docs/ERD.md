@@ -137,6 +137,13 @@ Seed rows, all verified 2026-09-11:
 | Patient-provider dispute resolution | No Surprises Act | final bill ≥ $400 over the GFE; third-party reviewer; binding on provider |
 | CA Hospital Fair Pricing | Health & Safety Code 127400 et seq. | non-profit; free care under 200% FPL, sliding scale 200–400%; written notice required; HCAI publishes policies |
 | 501(r) financial assistance | 26 USC 501(r) | non-profit hospitals must have and publicise a financial assistance policy |
+| Restriction on disclosure to a health plan | 45 CFR 164.522(a)(1)(vi) | provider **must** agree when the individual paid in full out of pocket and the disclosure is for payment or operations; covers only that item or service; does not apply where law requires the claim; some in-network contracts constrain the provider |
+
+> The last row is the one that makes self-pay a *right* rather than a favour, and
+> it is the least known. `applies_when` carries the two conditions (paid in full;
+> disclosure is for payment or operations) and `obligation` is **mandatory
+> agreement**, which distinguishes it from the ordinary restriction request in
+> 164.522(a)(1)(i) that a provider may simply decline.
 
 **SCRIPT** — the incantation itself: what to say, to whom, and what it triggers.
 `id, rights_rule_id, channel (phone | in_person | portal | letter), audience (scheduler | billing | registration), text, expected_response, if_refused, reading_level`

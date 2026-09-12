@@ -50,6 +50,41 @@ support it we need to know in week one rather than month three.
 
 ---
 
+## 2a. The cheaper path, and its catch
+
+Mike: *"Just imagine if intake had to tell me that this visit would cost a lot
+less if I left insurance out of it, or if I paid right now instead of waiting."*
+
+They never have to say it. The information is frequently **published** — cash
+prices are required in hospital transparency files — but nobody at the desk is
+obliged to volunteer that the cheaper path exists. That asymmetry is the whole
+product in one sentence, so the answer page owes the user **every path, and what
+each one costs them.**
+
+Four levers, and **none of them is free.** A tool that shows only the saving is
+doing the same thing to people that the hospital does, in the opposite
+direction.
+
+| Path | The saving | The catch, which must be shown beside it |
+|---|---|---|
+| **Self-pay instead of billing insurance** | often far below the negotiated rate, especially on a high deductible | **It usually does not count toward your deductible or out-of-pocket maximum.** If you will hit your deductible this year anyway, paying cash can cost more overall. It may also forfeit in-network protections and appeal rights for that service. |
+| **Prompt pay / pay-at-time-of-service discount** | commonly 10–30% where offered | You pay before the claim settles, so an error is yours to chase back. Get the discount in writing on the receipt. |
+| **Financial assistance / charity care** | up to the entire bill for non-profits | Income documentation, an application, and often a deadline after the date of service. Applying is not means-testing your dignity, but it is paperwork. |
+| **A different site of care** | the same service at an independent office rather than a hospital outpatient department | Continuity: your surgeon may only practise at one. Sometimes the cheaper site genuinely is not an option, and saying so honestly is part of the answer. |
+
+**Requirements this puts on v1:**
+
+1. The answer page shows the insurance path and the self-pay path **side by
+   side** whenever both are known, with the deductible caveat attached to the
+   self-pay figure. Never present cash as simply "cheaper".
+2. Ask one question — *"do you expect to hit your deductible this year?"* — and
+   let the answer reorder the recommendation. It is the single input that flips
+   this decision, it needs no personal data, and no site asks it.
+3. Prompt-pay discounts are a distinct `price_type` (`prompt_pay`), because they
+   are a different offer from a published cash price and are usually verbal.
+4. Every path carries a **script**: what to say to get that price, and what to
+   ask for in writing.
+
 ## 3. Stack
 
 **Taste call, proceeding unless overruled:**

@@ -102,7 +102,15 @@ shot", "knee injection", "steroid shot in knee" all resolve to 20610.
 `payer: id, name, hios_issuer_id` · `plan: id, payer_id, name, market, ein`
 
 **PRICE_OBSERVATION** — **the core table, and it is evidence, not truth.**
-`id, procedure_id, location_id, provider_id (nullable), plan_id (nullable), price_type (medicare_floor | gross_charge | discounted_cash | negotiated | user_reported), amount, currency, includes (json: procedure | drug | visit | facility_fee), source_id, observed_at, effective_from, effective_to, confidence`
+`id, procedure_id, location_id, provider_id (nullable), plan_id (nullable), price_type (medicare_floor | gross_charge | discounted_cash | prompt_pay | negotiated | user_reported), amount, currency, includes (json: procedure | drug | visit | facility_fee), counts_toward_deductible (bool, nullable), source_id, observed_at, effective_from, effective_to, confidence`
+
+> `prompt_pay` is a distinct type from `discounted_cash`: a pay-today discount is
+> a different offer from a published cash price, is usually verbal, and is
+> therefore usually only learned from a user report.
+>
+> `counts_toward_deductible` is why a cheaper price can be the worse choice, and
+> it must travel with the number rather than live in a footnote. See BUILD.md
+> §2a.
 
 > Two observations may contradict each other and both are kept. A published
 > cash price and three user-reported bills that are double it is the most

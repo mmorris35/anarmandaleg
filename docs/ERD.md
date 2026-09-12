@@ -146,7 +146,16 @@ Seed rows, all verified 2026-09-11:
 > told no.
 
 **CHARITY_POLICY** — one hospital's actual policy.
-`id, hospital_id, free_care_fpl_max, sliding_scale_fpl_max, application_url, presumptive_eligibility (json: CalFresh, WIC, LIHEAP...), source_id, as_of`
+`id, hospital_id, free_care_fpl_max, sliding_scale_fpl_max, application_url, presumptive_eligibility (json: CalFresh, WIC, LIHEAP...), covers_provider_based_locations (bool, nullable), application_deadline_days_after_service, source_id, as_of`
+
+> `covers_provider_based_locations` is the field that turns a warning into a
+> remedy. When a LOCATION's `billing_class` is `hospital_outpatient_dept`, its
+> parent hospital's policy may apply to that bill — so the same fact that
+> explains the facility fee may also forgive part of it. Nullable because many
+> policies are silent on it, and silence must read as *ask them*, never as no.
+>
+> `application_deadline_days_after_service` matters because assistance is often
+> still available **after** a bill arrives, and people assume it is too late.
 
 ### What the user gets, and gives back
 

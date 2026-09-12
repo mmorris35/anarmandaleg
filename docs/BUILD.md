@@ -72,6 +72,38 @@ direction.
 | **Financial assistance / charity care** | up to the entire bill for non-profits | Income documentation, an application, and often a deadline after the date of service. Applying is not means-testing your dignity, but it is paperwork. |
 | **A different site of care** | the same service at an independent office rather than a hospital outpatient department | Continuity: your surgeon may only practise at one. Sometimes the cheaper site genuinely is not an option, and saying so honestly is part of the answer. |
 
+### The ask is the trigger
+
+Mike: *"Or if the hospital could cover some of it if I just asked."*
+
+Financial assistance is the only lever on this page that **does nothing unless
+you ask for it.** A price is published whether you look or not; charity care
+requires an application, and an application requires knowing it exists. The
+obligation to have a policy and to notify people of it is met, in practice, by a
+sign somewhere and a PDF nobody reads.
+
+Two things about it are routinely misunderstood, and the page should say both:
+
+1. **It is not only for the destitute.** California's sliding scale runs to
+   **400% of the federal poverty level** — for a family of four in 2026 that is
+   roughly $132,000 a year. People who assume they earn too much to qualify are
+   the largest group leaving money on the table.
+2. **Enrolment in another programme can be enough on its own.** CalFresh,
+   CalWORKs, WIC, LIHEAP and similar count as presumptive evidence of
+   eligibility in California — no separate income proof needed.
+
+**The irony worth surfacing, and it is a feature:** the very thing that makes a
+clinic expensive — being a hospital outpatient department rather than an
+independent office — may also bring **that hospital's financial assistance
+policy** into play for the bill. The facility-fee trap and the forgiveness route
+are the same fact about the same address. When `billing_class` is
+`hospital_outpatient_dept` and the parent hospital has a `CHARITY_POLICY`, the
+page must say so in the same breath as the warning:
+
+> *"This address bills as part of Sutter. That is why the facility fee appears —
+> and it is also why Sutter's financial assistance policy may apply to this
+> bill. Here is the policy, and here is what to ask."*
+
 **Requirements this puts on v1:**
 
 1. The answer page shows the insurance path and the self-pay path **side by
@@ -84,6 +116,15 @@ direction.
    are a different offer from a published cash price and are usually verbal.
 4. Every path carries a **script**: what to say to get that price, and what to
    ask for in writing.
+5. **The facility-fee warning and the financial assistance route render
+   together.** Where `billing_class` is `hospital_outpatient_dept` and the parent
+   hospital has a `CHARITY_POLICY`, one is never shown without the other. They
+   are the same fact about the same address, and separating them turns a remedy
+   into a complaint.
+6. **Assistance is offered after the fact as well as before.** Where the policy
+   states a deadline, show it; where it does not, say that applying late is
+   usually still possible. The belief that the moment has passed is what stops
+   most people asking.
 
 ## 3. Stack
 

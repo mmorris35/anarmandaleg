@@ -183,6 +183,12 @@ detects disputes.
    register to find out what a knee injection costs.
 5. **Absence is a value.** No published cash price is a finding worth showing,
    not a blank. The map of who refuses to publish is part of the product.
+
+   Record non-disclosure explicitly rather than leaving a null: a `SOURCE` row
+   for the file that was fetched and did not contain the procedure, so "they do
+   not publish this" is a dated, sourced claim we can stand behind rather than
+   an absence we merely observed. Institutions are required to publish much of
+   this; the ones that do not are the story. See BUILD.md §9a.
 6. **Money is integer cents.** Never floats.
 
 ---

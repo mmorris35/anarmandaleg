@@ -209,8 +209,37 @@ An implementer must not, without an explicit decision from Mike:
   is a separate decision, still to be made. **Do not hard-code the product name
   anywhere** — config or a single constant, used by the UI.
 
-**Still open:**
+- **Individual clinicians are out.** Decided. Locations, organisations, systems
+  and payers are named; the doctor is not. `PROVIDER` stays in the model because
+  a Good Faith Estimate must list each provider's NPI, but no provider is ever
+  priced, ranked or compared.
 
-- **Provider-level pricing.** Not yet answered. Proceeding on locations and
-  organisations only, never individual clinicians, because naming humans invites
-  fights the data may not survive. Easy to add later; very hard to walk back.
+  **Who this is aimed at, in Mike's words:** *"My fight is with insurance and
+  healthcare systems that regularly lie by omission by not telling us their
+  rules."* That is the editorial line and it decides features. The clinician is
+  not the adversary and frequently does not know the price either. **The
+  adversary is the institution that knows the rule and does not say it.**
+
+**Still open:** nothing blocking. See §9a.
+
+## 9a. What "lie by omission" means as a feature
+
+Mike's sentence names the actual product, so it is written down rather than left
+as sentiment: **the harm is the undisclosed rule, and the counter is to record
+who does not disclose.**
+
+Absence is already a value (ERD §4, rule 5). Make it visible:
+
+- A hospital with no published discounted cash price for a shoppable procedure
+  is a **finding**, not a gap in our data. Show it: *"this hospital publishes no
+  cash price for this, though it is required to."*
+- A location whose billing class cannot be determined from any public source is
+  the same kind of finding, and the question to ask them is the remedy.
+- A non-profit hospital whose charity care policy is not locatable is a finding,
+  and one with a statutory obligation behind it.
+- Every rule in `RIGHTS_RULE` exists because somebody had to be compelled to say
+  something. The scripts are how a patient extracts what was never volunteered.
+
+Over time this yields the thing no price tool has: **a map of who tells you and
+who does not.** That map is worth more than any single price, and it is built
+from data we already have to collect.
